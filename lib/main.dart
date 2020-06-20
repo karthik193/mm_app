@@ -26,20 +26,20 @@ class _MyAppState extends State<MyApp> {
     return [
       BottomNavigationBarItem(
           icon: Icon(Icons.check),
-          backgroundColor: Color(0xFFD5DCE0),
+          backgroundColor: Color(0xFF0A2D5E),
           title: Text('')),
       BottomNavigationBarItem(
           icon: Icon(Icons.equalizer),
-          backgroundColor: Color(0xFFD5DCE0),
+          backgroundColor: Color(0xFF0A2D5E),
           title: Text('')),
       BottomNavigationBarItem(
         icon: Icon(Icons.search),
         title: Text(''),
-        backgroundColor: Color(0xFFD5DCE0),
+        backgroundColor: Color(0xFF0A2D5E),
       ),
       BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          backgroundColor: Color(0xFFD5DCE0),
+          backgroundColor: Color(0xFF0A2D5E),
           title: Text('')),
     ];
   }
