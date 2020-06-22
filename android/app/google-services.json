@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1050753436729",
+    "firebase_url": "https://medapp-c8045.firebaseio.com",
+    "project_id": "medapp-c8045",
+    "storage_bucket": "medapp-c8045.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050753436729:android:f59ef40ca08146bfccd1e8",
+        "android_client_info": {
+          "package_name": "com.karthik.mmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1050753436729-5pr38o0crs7fum32ppgl9rhcmk7n4cdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVOjceRROuPuLWvFY01cX0VBq1xKdLp7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1050753436729-5pr38o0crs7fum32ppgl9rhcmk7n4cdg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -91,8 +91,8 @@ class plan extends StatefulWidget {
 class _planState extends State<plan> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
+    return ListView(
+       children: <Widget>[
         Container(
             decoration: BoxDecoration(
               border: Border.all(
@@ -123,6 +123,7 @@ class _planState extends State<plan> {
         precautions(),
         precautions()
       ],
+    
     );
   }
 }
