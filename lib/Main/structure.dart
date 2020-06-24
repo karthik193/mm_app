@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mmapp/Database/users.dart';
-import 'package:mmapp/Main/main.dart';
+import '../main.dart';
 import 'package:mmapp/UserAuth/Login.dart';
 import 'package:mmapp/analytics/analytics.dart';
 import '../Plan/plan.dart';
