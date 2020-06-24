@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-class precautions extends StatelessWidget {
+class Precautions extends StatelessWidget {
   final TextStyle _forTableatts = TextStyle(
       fontWeight: FontWeight.bold ,
       fontFamily: "Bahnschrift",

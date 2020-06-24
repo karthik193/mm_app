@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1050753436729",
-    "firebase_url": "https://medapp-c8045.firebaseio.com",
-    "project_id": "medapp-c8045",
-    "storage_bucket": "medapp-c8045.appspot.com"
+    "project_number": "829206151811",
+    "firebase_url": "https://stimulife-ebab5.firebaseio.com",
+    "project_id": "stimulife-ebab5",
+    "storage_bucket": "stimulife-ebab5.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1050753436729:android:f59ef40ca08146bfccd1e8",
+        "mobilesdk_app_id": "1:829206151811:android:62d6bfa91ccd5e82a251b6",
         "android_client_info": {
           "package_name": "com.karthik.mmapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1050753436729-5pr38o0crs7fum32ppgl9rhcmk7n4cdg.apps.googleusercontent.com",
+          "client_id": "829206151811-0mrl6om0uf4f6la30p5crhefuuosj1ua.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCVOjceRROuPuLWvFY01cX0VBq1xKdLp7w"
+          "current_key": "AIzaSyA4nZeJ11nazB3scWeOHFuRofsGOF6KCr8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1050753436729-5pr38o0crs7fum32ppgl9rhcmk7n4cdg.apps.googleusercontent.com",
+              "client_id": "829206151811-0mrl6om0uf4f6la30p5crhefuuosj1ua.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

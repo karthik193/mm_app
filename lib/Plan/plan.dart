@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mmapp/Plan/precautions.dart';
 
-class session extends StatefulWidget {
+class Session extends StatefulWidget {
   final String time , npills , comment ;
-  session(this.time , this.npills , this.comment) ;
+  Session(this.time , this.npills , this.comment) ;
   @override
-  _sessionState createState() => _sessionState(this.time , this.npills , this.comment);
+  _SessionState createState() => _SessionState(this.time , this.npills , this.comment);
 }
 
-class _sessionState extends State<session> {
+class _SessionState extends State<Session> {
   final String time , npills , comment ;
-  _sessionState(this.time , this.npills , this.comment);
+  _SessionState(this.time , this.npills , this.comment);
 
   Color mycolor ;
   @override
@@ -83,12 +83,12 @@ class _sessionState extends State<session> {
   }
 }
 
-class plan extends StatefulWidget {
+class Plan extends StatefulWidget {
   @override
-  _planState createState() => _planState();
+  _PlanState createState() => _PlanState();
 }
 
-class _planState extends State<plan> {
+class _PlanState extends State<Plan> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -113,15 +113,15 @@ class _planState extends State<plan> {
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
-                  session("8:00 AM","2 pills" ,"after break fast"),
-                  session("12:30 PM","1 pills" ,"After lunch"),
-                  session("9:10 PM","1 pills" ,"before sleep"),
+                  Session("8:00 AM","2 pills" ,"after break fast"),
+                  Session("12:30 PM","1 pills" ,"After lunch"),
+                  Session("9:10 PM","1 pills" ,"before sleep"),
                 ],
               ),
             ),
           ),
-        precautions(),
-        precautions()
+        Precautions(),
+        Precautions()
       ],
     
     );

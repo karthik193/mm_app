@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mmapp/Database/users.dart';
 
 class AppBody extends StatefulWidget {
   @override
@@ -35,7 +36,12 @@ class _AppBodyState extends State<AppBody> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("Name: Virajith Kumar"),
+                      Row(
+                        children: <Widget>[
+                          Text("Name :"),
+                          getUserName(),
+                        ],
+                      ),
                       Text("Age: 28"),
                       Text("CurOrg: KIMS Hospital"),
                     ],

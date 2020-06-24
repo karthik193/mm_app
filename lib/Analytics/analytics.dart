@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mmapp/analytics/HealthAtt.dart';
+import 'package:mmapp/analytics/healthAtt.dart';
 import 'package:mmapp/analytics/hrGraph.dart' ;
 
-class analytics extends StatefulWidget {
+class Analytics extends StatefulWidget {
   @override
-  _analyticsState createState() => _analyticsState();
+  _AnalyticsState createState() => _AnalyticsState();
 }
 
-class _analyticsState extends State<analytics> {
+class _AnalyticsState extends State<Analytics> {
 
   @override
   Widget build(BuildContext context) {
 
-    Padding Heading( String text)
+    Padding heading( String text)
     {
       return Padding(
         padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
@@ -31,7 +31,7 @@ class _analyticsState extends State<analytics> {
             //color: Colors.greenAccent,
             child: Column(
               children: <Widget>[
-                Heading("Health Analytics"),
+                heading("Health Analytics"),
                 Padding(
 
                   padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
@@ -55,7 +55,7 @@ class _analyticsState extends State<analytics> {
                       ),
                       child: SimpleLineChart.withSampleData()),
                 ),
-                Heading("Health Attributes"),
+                heading("Health Attributes"),
                 HealthAtt(),
                 RaisedButton(
 

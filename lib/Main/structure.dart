@@ -1,28 +1,28 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:mmapp/Database/users.dart';
+import 'package:mmapp/Main/main.dart';
+import 'package:mmapp/UserAuth/Login.dart';
 import 'package:mmapp/analytics/analytics.dart';
-import 'Plan/plan.dart';
-import 'Search/searchpage.dart';
-import 'Profile/profilepage.dart';
+import '../Plan/plan.dart';
+import '../Search/searchpage.dart';
+import '../Profile/profilepage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
-
-class MyApp extends StatefulWidget {
-  MyApp({Key key}) : super(key: key);
+class Structure extends StatefulWidget {
+  Structure({Key key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _StructureState createState() => _StructureState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _StructureState extends State<Structure> {
   int bottomSelectedIndex = 0;
-  
+
 
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
@@ -52,16 +52,17 @@ class _MyAppState extends State<MyApp> {
   );
 
   Widget buildPageView() {
+
     return PageView(
       controller: pageController,
       onPageChanged: (index) {
         pageChanged(index);
       },
       children: <Widget>[
-        plan(),
-        analytics(),
+        Plan(),
+        Analytics(),
         SearchPage(),
-        AppBody(),
+        AppBody() ,
       ],
     );
   }
@@ -87,11 +88,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: Icon(Icons.panorama_fish_eye),
-        title: Text('stimuLife'),
+        title: Text("stimuLife"),
         actions: <Widget>[
           // action button
           IconButton(
@@ -127,6 +129,7 @@ class MyMenu extends StatefulWidget {
 }
 
 class _MyMenuState extends State<MyMenu> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -143,6 +146,10 @@ class _MyMenuState extends State<MyMenu> {
             ListTile(title: Text("Schemes"), onTap: () {}),
             ListTile(title: Text("Talk to a Doctor"), onTap: () {}),
             ListTile(title: Text("About"), onTap: () {}),
+            ListTile(title: Text("Logout"), onTap: () {
+              FirebaseAuth.instance.signOut() ;
+              Navigator.push(context, MaterialPageRoute(builder:(context) => MyApp())) ;
+            }),
           ]).toList(),
         ),
       ),
