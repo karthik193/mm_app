@@ -7,6 +7,38 @@ class AppBody extends StatefulWidget {
 }
 
 class _AppBodyState extends State<AppBody> {
+  BoxDecoration bd = BoxDecoration(
+    color: Colors.white,
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey,
+        blurRadius: 12.0, // soften the shadow
+        spreadRadius: 3.0, //extend the shadow
+        offset: Offset(
+          5.0, // Move to right 10  horizontally
+          5.0, // Move to bottom 10 Vertically
+        ),
+      )
+    ],
+    borderRadius:new BorderRadius.all(new Radius.circular(20.0)),
+  ) ;
+
+  BoxDecoration preHospitals =  BoxDecoration(
+    color: Colors.grey[200],
+    boxShadow: [
+      BoxShadow(
+        color: Colors.grey,
+        blurRadius: 10.0, // soften the shadow
+        spreadRadius: 2.0, //extend the shadow
+        offset: Offset(
+          0.0, // Move to right 10  horizontally
+          0.0, // Move to bottom 10 Vertically
+        ),
+      )
+    ],
+    borderRadius:new BorderRadius.all(new Radius.circular(20.0)),
+
+  );
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,14 +52,16 @@ class _AppBodyState extends State<AppBody> {
                 child: Padding(
                   padding: EdgeInsets.all(20),
                   child: Container(
-                    height: 100,
+                    height: 120,
                     width: 100,
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         image: new DecorationImage(
                             fit: BoxFit.fill,
-                            image: new NetworkImage(
-                                "https://cdn.pixabay.com/photo/2016/03/26/20/35/young-man-1281282__340.jpg"))),
+                            image: new  NetworkImage("https://scontent-bom1-1.cdninstagram.com/v/t51.2885-19/s150x150/100958681_249556352965333_8495728044890128384_n.jpg?_nc_ht=scontent-bom1-1.cdninstagram.com&_nc_ohc=m7gyGYYu08YAX_sX0Ba&oh=ac63e5e454e2f7bef83097305438fc37&oe=5F1D6986"),
+                            //new NetworkImage(
+                                //"https://cdn.pixabay.com/photo/2016/03/26/20/35/young-man-1281282__340.jpg")
+                          )),
                   ),
                 ),
               ),
@@ -63,7 +97,8 @@ class _AppBodyState extends State<AppBody> {
           Container(
             margin: EdgeInsets.all(5),
             height: 70,
-            color: Color(0xFFF6F6F6),
+            //color: Color(0xFFF6F6F6),
+            decoration: bd,
             child: Center(
               child: Row(
                 children: <Widget>[
@@ -91,7 +126,8 @@ class _AppBodyState extends State<AppBody> {
           Container(
             margin: EdgeInsets.all(5),
             height: 70,
-            color: Color(0xFFF6F6F6),
+            //color: Color(0xFFF6F6F6),
+            decoration: preHospitals,
             child: Center(
               child: Container(
                 child: Column(
@@ -107,7 +143,8 @@ class _AppBodyState extends State<AppBody> {
           Container(
             margin: EdgeInsets.all(5),
             height: 70,
-            color: Color(0xFFF6F6F6),
+            //color: Color(0xFFF6F6F6),
+            decoration: preHospitals,
             child: Center(
               child: Container(
                 child: Column(
@@ -123,7 +160,8 @@ class _AppBodyState extends State<AppBody> {
           Container(
             margin: EdgeInsets.all(5),
             height: 70,
-            color: Color(0xFFF6F6F6),
+            //color: Color(0xFFF6F6F6),
+            decoration: preHospitals,
             child: Center(
               child: Container(
                 child: Column(

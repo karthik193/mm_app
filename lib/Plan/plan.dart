@@ -93,6 +93,18 @@ class _PlanState extends State<Plan> {
   Widget build(BuildContext context) {
     return ListView(
        children: <Widget>[
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Center(
+             child: Text("Medication Plan :",
+                 style : TextStyle(
+                   fontWeight: FontWeight.bold ,
+                   fontSize: 20,
+                 )
+             ),
+           ),
+         ),
+        Center(child: Text("(tap on below tabs)")),
         Container(
             decoration: BoxDecoration(
               border: Border.all(
@@ -113,6 +125,7 @@ class _PlanState extends State<Plan> {
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
+
                   Session("8:00 AM","2 pills" ,"after break fast"),
                   Session("12:30 PM","1 pills" ,"After lunch"),
                   Session("9:10 PM","1 pills" ,"before sleep"),
@@ -121,7 +134,6 @@ class _PlanState extends State<Plan> {
             ),
           ),
         Precautions(),
-        Precautions()
       ],
     
     );

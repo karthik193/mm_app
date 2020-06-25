@@ -8,6 +8,13 @@ Future loadUserData(String uid) async
 {
     _data = _users.document(uid);
 }
+Future createNewUser(var newUserData , var uid)
+{
+    var _newSet  = Firestore.instance.document("users/" + uid) ;
+    _newSet.setData(newUserData) ;
+    _data = _newSet ;
+
+}
 StreamBuilder getUserName ()
 {
     print(_data) ;
@@ -20,6 +27,7 @@ StreamBuilder getUserName ()
     ) ;
 
 }
+
 
 
 

@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mmapp/Database/users.dart';
 import 'package:mmapp/Main/structure.dart';
 import 'package:mmapp/Plan/plan.dart';
+import 'package:mmapp/UserAuth/SignUp.dart';
 
 
 class Login extends StatefulWidget {
@@ -95,7 +96,7 @@ class _LoginState extends State<Login> {
       try{
         FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password)).user ;
         loadUserData(user.uid) ;
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Structure())) ;
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Structure(id: 0))) ;
       }
       catch(e)
       {
@@ -106,7 +107,7 @@ class _LoginState extends State<Login> {
   }
 
   Future signUp(){
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Structure())) ;
+    Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp())) ;
 
   }
 }

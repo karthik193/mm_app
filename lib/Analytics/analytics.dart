@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mmapp/analytics/healthAtt.dart';
 import 'package:mmapp/analytics/hrGraph.dart' ;
@@ -63,12 +64,37 @@ class _AnalyticsState extends State<Analytics> {
                   child: Text("Health Checkup"),
                   onPressed: (){
                       setState(() {
-                        print("baasdfasd");
+                        print("Health Check up");
                       });}
                 ),
+                heading("Cardio Status"),
+                Row(
+                  children: <Widget>[
+                    Container(
+                      //color: Colors.green,
+                        child: Image.network("https://media1.giphy.com/media/l6JC0IxMDIS4QrUxO5/giphy.gif" , width: 150 , height: 150,)//Image.asset("CG_Heart.gif" , width: 100, height: 100,),
+                    ),
+                 Container(
+                   //color: Colors.green,
+                   child: Column(
+
+                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                     children: <Widget>[
+                       Text("pulse Rate: 75 b/m"),
+                       Text(""),
+                       Text("Bp : 120/80 (normal)"),
+                     ],
+                   ),
+                 )
+
+
 
               ],
             ),
+
+            ],
+          ),
           ),
         ],
       ),

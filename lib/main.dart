@@ -20,6 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "stimuLife" ,
+      theme: ThemeData(
+        fontFamily: "Mont",
+      ),
       home : UserLogin(),
     );
   }
@@ -34,10 +37,26 @@ class UserLogin extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-        Container(
-              //color: Colors.green,
-                child: Image.network("https://upload.wikimedia.org/wikipedia/commons/1/12/CG_Heart.gif" , width: 200 , height: 200,)//Image.asset("CG_Heart.gif" , width: 100, height: 100,),
-            ),
+//        Container(
+//              //color: Colors.green,
+//                child: Image.network("https://upload.wikimedia.org/wikipedia/commons/1/12/CG_Heart.gif" , width: 200 , height: 200,)//Image.asset("CG_Heart.gif" , width: 100, height: 100,),
+//            ),
+         Container(
+           color: Colors.grey[200],
+           padding: EdgeInsets.all(10.00),
+           child: Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: <Widget>[
+               Center(child: Text("help:", )) ,
+               Text("1. Sign up Page in not Complete.you can sign in using below Credencials"),
+               Text(""),
+               Text("email : karthik.pasupulatei@gmail.com"),
+               Text("password : mypass\n"),
+               Text("2. To know how to use the app select the options Icon and Help.")
+             ],
+
+           ),
+         ),
          Center(child: Login()) ,
         ],
       ),
